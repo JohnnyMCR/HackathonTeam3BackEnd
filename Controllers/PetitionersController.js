@@ -1,6 +1,6 @@
 const express = require("express");
 const petitioners = express.Router();
-const { getAllPetitioners, createPetitioner } = require("../queries/petitioners.js");
+const { getAllPetitioners, createPetitioner } = require("../queries/petition.js");
 
 petitioners.get("/", async (req, res) => {
     const allPetitioners = await getAllPetitioners();
@@ -9,7 +9,7 @@ petitioners.get("/", async (req, res) => {
     } else {
         res.status(500).json({ error: "Server Error" });
     }
-});
+})
 
 petitioners.post("/", async (req, res) => {
     const newPetitioner = req.body;

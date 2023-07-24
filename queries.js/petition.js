@@ -1,7 +1,5 @@
 const db = require('../db/dbConfig');
 
-const db = require('../db/dbConfig');
-
 const getAllPetitioners = async () => {
     try {
         const allPetitioners = await db.any("SELECT * FROM petitioners");
@@ -19,3 +17,7 @@ const createPetitioner = async (petitionerToAdd) => {
         return error;
     }
 };
+module.exports = {
+    getAllPetitioners,
+    createPetitioner
+}

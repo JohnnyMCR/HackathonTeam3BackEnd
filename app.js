@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const logger = require("morgan");
-const PetitionersController = require("./Controllers/PetitionersController.js");
+const PetitionersController = require('./Controllers/PetitionersController.js');
 
 app.use(express.json());
 app.use(cors());
